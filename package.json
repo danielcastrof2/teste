@@ -5,6 +5,7 @@
     "main": "src/server/indexServer.ts",
     "scripts": {
         "start": "ts-node -r tsconfig-paths/register src/server/app.ts",
+        "build": "netlify deploy --prod",
         "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
         "migration:generate": "npm run typeorm -- migration:generate -n",
         "migration:run": "npm run typeorm -- migration:run",
