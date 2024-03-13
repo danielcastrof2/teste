@@ -65,6 +65,8 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 // Configuração do servidor
 const PORT = process.env.PORT;
 
+module.exports.handler = serverless(app);
+
   app.listen(PORT, () => {
     console.log(`+++ O servidor está rodando na porta ${PORT} +++`);
     console.log(`+++ O servidor está acessível em https://localhost:${PORT} +++`);
